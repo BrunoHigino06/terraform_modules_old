@@ -1,4 +1,4 @@
-variable "docker_ports" {
+variable "vpc" {
   type = list(object({
     cidr_block = string
     Name       = string
