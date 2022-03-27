@@ -1,7 +1,6 @@
-# terraform_modules
+# Terraform modules
 
-What is VPC module? <br>
-Creates a simple vpc <br>
-How to use: 
+```What is Terraform modules?```<br>
+Modules to facilitate the creation of aws infrastructures on aws cloud 
 
 
