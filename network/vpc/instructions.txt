@@ -1,0 +1,18 @@
+VPC Module
+Whats is the vpc module? This module creates a basic vpc.
+
+How to use the vpc module? 
+This module was created with one map variable with two indices:
+Name = name of vpc
+cidr_block = de cidr_block of the vpc
+
+To use this kind of variable in the module it's necessary create a instance of the variable on de main.tf, for example:
+
+module "vpc" {
+  source = "git::https://github.com/BrunoHigino06/terraform_modules.git//network/vpc"
+
+  vpc = {
+    Name = "GhostVpc"
+    cidr_block = "10.0.0.0/16"
+  }
+}
