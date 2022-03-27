@@ -1,7 +1,12 @@
 variable "vpc" {
-  type    = map
-  default = {
-    "cidr_block"  = ""
-    "Name"        = ""
-  }
+  type = list(object({
+    cidr_block = string
+    Name       = string
+  }))
+  default = [
+    {
+      cidr_block = ""
+      Name       = ""
+    }
+  ]
 }
