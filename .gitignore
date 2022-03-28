@@ -3,3 +3,4 @@ network/vpc/.terraform.lock.hcl
 network/vpc/.terraform/providers/registry.terraform.io/hashicorp/aws/4.8.0/windows_amd64/terraform-provider-aws_v4.8.0_x5.exe
 network/subnet/.terraform.lock.hcl
 network/subnet/.terraform/providers/registry.terraform.io/hashicorp/aws/4.8.0/windows_amd64/terraform-provider-aws_v4.8.0_x5.exe
+followUP.txt
