@@ -1,16 +1,11 @@
 variable "vpc_id" {}
 
 variable "subnet" {
-    type = map(any)
-    default = {
-        public = {
-            name  = ""
-            cidr_block = ""
-        }
-        private = {
-            name = ""
-            cidr_block = ""
-        }
-    }
-
+ type = map(any)
+  default = {
+    name_public  = ""
+    cidr_block_public = ""
+    name_private  = ""
+    cidr_block_private = ""   
+  }
 }
