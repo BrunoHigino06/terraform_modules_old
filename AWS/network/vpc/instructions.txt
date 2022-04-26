@@ -12,7 +12,7 @@ The name of the variable is vpc_id it will be used for get the vpc id when they 
 To use this kind of variable in the module it's necessary create a instance of the variable on de main.tf, for example:
 
 module "vpc" {
-  source = "git::https://github.com/BrunoHigino06/terraform_modules.git//network/vpc"
+  source = "git::https://github.com/BrunoHigino06/terraform_modules.git//aws/network/vpc"
 
   vpc = {
     Name = "GhostVpc"
