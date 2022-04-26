@@ -12,3 +12,5 @@ AWS/network/.terraform/modules/modules.json
 AWS/network/provider.tf
 AWS/network/vpc/provider.tf
 AWS/network/subnet/provider.tf
+AWS/network/.terraform.lock.hcl
+AWS/network/.terraform/providers/registry.terraform.io/hashicorp/aws/4.11.0/windows_amd64/terraform-provider-aws_v4.11.0_x5.exe

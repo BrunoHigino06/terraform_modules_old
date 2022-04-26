@@ -1,9 +1,9 @@
 resource "aws_subnet" "subnets" {
     count = length(var.cidr_block_subnets)
     vpc_id     = var.vpc_id
-    cidr_block = var.subnet.subnets_cidr_block[count.index]
+    cidr_block = var.subnet.cidr_block_subnets[count.index]
     tags = {
-        Name = var.subnets_names[count.index]
+        Name = var.name_subnets[count.index]
     }
 }
 
