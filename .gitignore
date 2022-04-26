@@ -8,3 +8,7 @@ main.tf
 network/subnet/providers.tf
 network/vpc/providers.tf
 providers.tf
+AWS/network/.terraform/modules/modules.json
+AWS/network/provider.tf
+AWS/network/vpc/provider.tf
+AWS/network/subnet/provider.tf
