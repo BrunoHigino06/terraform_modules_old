@@ -4,6 +4,5 @@ variable "subnet_name_association" {
 }
 
 variable "route_table_name_association" {
-  type = list(string)
   description = "Id's of the route tables to association with the subnets"
 }

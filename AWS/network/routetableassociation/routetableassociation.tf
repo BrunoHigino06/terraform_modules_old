@@ -19,13 +19,13 @@ data "aws_route_table" "filter_route_table_id" {
 }
 
 locals {
-    route_table_id = data.aws_route_table.filter_route_table_id[*].id
+    route_table_id = data.aws_route_table.filter_route_table_id.id
 }
 
 resource "aws_route_table_association" "aws_route_table_association" {
     count = length(var.subnet_name_association)
     subnet_id = local.subnet_ids[count.index]
-    route_table_id = local.route_table_id[*]
+    route_table_id = local.route_table_id
 
     depends_on = [
       data.aws_route_table.filter_route_table_id,
