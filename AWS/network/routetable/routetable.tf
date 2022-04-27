@@ -5,3 +5,7 @@ resource "aws_route_table" "route_tables" {
         Name = var.rt_names[count.index]
     }
 }
+
+output "route_table_id" {
+    value = aws_route_table.route_tables.id
+}
