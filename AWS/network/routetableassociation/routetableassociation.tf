@@ -2,7 +2,7 @@ data "aws_subnet" "filter_subnet_id" {
     count = length(var.subnet_name_association)
     filter {
         name = "tag:Name"
-        values = var.subnet_name_association[*]
+        values = var.subnet_name_association[count.index]
     }
 }
 
@@ -13,7 +13,7 @@ locals {
 data "aws_route_table" "filter_route_table_id" {
     filter {
         name = "tag:Name"
-        values = var.route_table_name_association[*]
+        values = var.route_table_name_association[count.index]
     }
 }
 
