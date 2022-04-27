@@ -11,11 +11,10 @@ locals {
 }
 
 data "aws_route_table" "filter_route_table_id" {
-    count = length(var.route_table_name_association)
-        filter {
-            name = "tag:Name"
-            values = var.route_table_name_association[*]
-        }
+    filter {
+        name = "tag:Name"
+        values = var.route_table_name_association[*]
+    }
 }
 
 locals {
