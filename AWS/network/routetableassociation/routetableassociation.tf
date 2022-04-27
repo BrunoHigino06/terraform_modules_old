@@ -7,7 +7,7 @@ data "aws_subnet" "filter_subnet_id" {
 }
 
 locals {
-    subnet_ids = aws_subnet.filter_subnet_id[*].id
+    subnet_ids = data.aws_subnet.filter_subnet_id[*].id
 }
 
 data "aws_route_table" "filter_route_table_id" {
@@ -19,7 +19,7 @@ data "aws_route_table" "filter_route_table_id" {
 }
 
 locals {
-    route_table_id = aws_route_table.filter_route_table_id[*].Id
+    route_table_id = data.aws_route_table.filter_route_table_id[*].Id
 }
 
 resource "aws_route_table_association" "aws_route_table_association" {
