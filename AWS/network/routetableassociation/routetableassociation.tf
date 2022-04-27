@@ -24,8 +24,8 @@ locals {
 
 resource "aws_route_table_association" "aws_route_table_association" {
     count = length(var.subnet_name_association)
-    subnet_id = local.subnet_ids[count.index]
-    route_table_id = local.route_table_id[count.index]
+    subnet_id = local.subnet_ids[*]
+    route_table_id = local.route_table_id[*]
 
     depends_on = [
       data.aws_route_table.filter_route_table_id,
