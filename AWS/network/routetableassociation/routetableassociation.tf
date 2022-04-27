@@ -19,7 +19,7 @@ data "aws_route_table" "filter_route_table_id" {
 }
 
 locals {
-    route_table_id = data.aws_route_table.filter_route_table_id[*].Id
+    route_table_id = data.aws_route_table.filter_route_table_id[*].id
 }
 
 resource "aws_route_table_association" "aws_route_table_association" {
