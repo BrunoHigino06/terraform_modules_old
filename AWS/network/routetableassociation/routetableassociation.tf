@@ -7,7 +7,6 @@ data "aws_subnet" "filter_subnet_id" {
 }
 
 locals {
-    description = "id's to associate with route table"
     subnet_ids = aws_subnet.filter_subnet_id[*].id
 }
 
@@ -20,7 +19,6 @@ data "aws_route_table" "filter_route_table_id" {
 }
 
 locals {
-    description = "id's to associate with subnets"
     route_table_id = aws_route_table.filter_route_table_id[*].Id
 }
 
