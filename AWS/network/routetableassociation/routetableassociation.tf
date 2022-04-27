@@ -1,3 +1,5 @@
+
+#criar um for each para as subnet !! !!! ! !! !!!! !!  !!!!!! !!! ! usando count length não esta funcionando
 data "aws_subnet" "filter_subnet_id" {
     count = length(var.subnet_name_association)
     filter {
